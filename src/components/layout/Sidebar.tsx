@@ -1,3 +1,4 @@
+
 import React from "react";
 import { cn } from "@/lib/utils";
 
@@ -9,15 +10,21 @@ export const Sidebar: React.FC<SidebarProps> = ({ className }) => {
   return (
     <div className={cn("min-w-60 w-[260px]", className)}>
       <div className="flex min-h-[60px] w-full flex-col items-center text-lg text-gray-800 font-medium whitespace-nowrap leading-none justify-center">
-        <div className="flex items-center gap-2">
+        <button className="bg-gray-100 w-full relative flex items-start gap-2 justify-center my-auto px-4 py-2 mx-2 rounded-md">
+          <div className="flex items-center gap-4 justify-center flex-1 shrink basis-[0%] my-auto">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/3a302e9e45884d5dbbb217f74f227a95/936481c6ea1dd6ed0175d5ac516b8d0cfde08f5abfe3f7de88433e1222f1a15f"
+              className="aspect-[1] object-contain w-6 self-stretch shrink-0 my-auto rounded-[50%]"
+              alt="Profile"
+            />
+            <span className="self-stretch my-auto text-sm">Jenny Wilson</span>
+          </div>
           <img
-            loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/3a302e9e45884d5dbbb217f74f227a95/8f440d3c29de25291de719593d79f650b455d64031de7ea60ca9149b9d82e286"
-            className="aspect-[1] object-contain w-7 self-stretch shrink-0 my-auto rounded-[42px]"
-            alt="Zoe Logo"
+            src="https://cdn.builder.io/api/v1/image/assets/3a302e9e45884d5dbbb217f74f227a95/2dc81db42d835a4c6d039f6cb80e7c3c0f16f1fe8a4bc750d8c8c610d450044d"
+            className="aspect-[1] object-contain w-4 rounded absolute z-0 shrink-0 h-4 right-4 top-1/2 -translate-y-1/2"
+            alt="Expand"
           />
-          <div className="self-stretch gap-1.5 my-auto">Zoe</div>
-        </div>
+        </button>
       </div>
 
       <nav className="min-h-[880px] w-full overflow-hidden pb-4">
@@ -113,26 +120,6 @@ export const Sidebar: React.FC<SidebarProps> = ({ className }) => {
           </div>
         </button>
       </nav>
-
-      <div className="flex min-h-[60px] w-full flex-col items-stretch text-xs text-gray-800 font-normal justify-center">
-        <div className="flex w-full items-center justify-between px-1 py-2">
-          <button className="bg-gray-100 self-stretch relative flex min-w-60 w-full items-start gap-2 justify-center flex-1 shrink basis-[0%] my-auto pr-4 py-2 rounded-md">
-            <div className="z-0 flex items-center gap-4 justify-center flex-1 shrink basis-[0%] my-auto">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/3a302e9e45884d5dbbb217f74f227a95/936481c6ea1dd6ed0175d5ac516b8d0cfde08f5abfe3f7de88433e1222f1a15f"
-                className="aspect-[1] object-contain w-6 self-stretch shrink-0 my-auto rounded-[50%]"
-                alt="Profile"
-              />
-              <span className="self-stretch my-auto">Jenny Wilson</span>
-            </div>
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/3a302e9e45884d5dbbb217f74f227a95/2dc81db42d835a4c6d039f6cb80e7c3c0f16f1fe8a4bc750d8c8c610d450044d"
-              className="aspect-[1] object-contain w-4 rounded absolute z-0 shrink-0 h-4 right-4 bottom-3"
-              alt="Expand"
-            />
-          </button>
-        </div>
-      </div>
     </div>
   );
 };
