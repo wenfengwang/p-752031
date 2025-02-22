@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Sidebar } from "@/components/layout/Sidebar";
 import { SearchBar } from "@/components/search/SearchBar";
@@ -29,70 +30,68 @@ const Index = () => {
   ];
 
   return (
-    <div className="flex flex-col items-stretch pb-[1011px] max-md:pb-[100px]">
-      <div className="bg-[rgba(245,247,251,1)] min-h-[1080px] w-full overflow-hidden max-md:max-w-full">
-        <div className="min-h-[79px] w-full max-md:max-w-full">
-          <img
-            loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/3a302e9e45884d5dbbb217f74f227a95/345c8f353dcc7bca9150179be6539412de26b15835cb07020bf88c27eb05afab"
-            className="aspect-[45.45] object-contain w-[1920px] max-md:max-w-full"
-            alt="Header decoration"
-          />
-        </div>
-
-        <div className="bg-gray-50 flex w-full items-stretch flex-wrap max-md:max-w-full">
-          <Sidebar />
-
-          <main className="bg-white min-w-60 flex-1 shrink basis-[0%] pt-[200px] rounded-md max-md:max-w-full max-md:pt-[100px]">
-            <div className="flex w-full flex-col items-center justify-center max-md:max-w-full">
-              <h1 className="text-[rgba(33,34,75,1)] text-4xl font-medium leading-none text-center max-md:max-w-full">
-                What can I help with?
-              </h1>
-
-              <SearchBar />
-
-              <div className="flex w-full flex-col items-stretch mt-[100px] px-10 max-md:max-w-full max-md:mt-10 max-md:px-5">
-                <h2 className="text-gray-800 text-lg font-medium leading-none max-md:max-w-full">
-                  Popular templates
-                </h2>
-
-                <CategoryTabs
-                  categories={categories}
-                  activeCategory={activeCategory}
-                  onCategoryChange={setActiveCategory}
-                  className="mt-6"
-                />
-
-                <div className="flex w-full gap-4 flex-wrap mt-6 max-md:max-w-full">
-                  {templates.map((template, index) => (
-                    <TemplateCard
-                      key={index}
-                      title={template.title}
-                      description={template.description}
-                      icons={template.icons}
-                      selected={index === 0}
-                    />
-                  ))}
-                </div>
-              </div>
-            </div>
-          </main>
-        </div>
+    <div className="min-h-screen flex flex-col bg-[rgba(245,247,251,1)]">
+      <div className="w-full overflow-hidden">
+        <img
+          loading="lazy"
+          src="https://cdn.builder.io/api/v1/image/assets/3a302e9e45884d5dbbb217f74f227a95/345c8f353dcc7bca9150179be6539412de26b15835cb07020bf88c27eb05afab"
+          className="w-full h-auto object-cover"
+          alt="Header decoration"
+        />
       </div>
 
-      <div className="z-10 flex mt-[-1033px] w-full max-w-[1772px] flex-col text-sm text-[rgba(32,33,36,1)] font-normal whitespace-nowrap tracking-[0.25px] py-0.5 max-md:max-w-full max-md:mt-[-200px] max-md:mr-2.5">
-        <div className="bg-[rgba(241,243,244,1)] z-10 flex w-full max-w-[1705px] items-stretch gap-5 flex-wrap justify-between px-[11px] py-1.5 rounded-[14px] max-md:max-w-full">
-          <div className="flex items-stretch gap-2.5">
+      <div className="flex flex-1">
+        <Sidebar />
+
+        <main className="flex-1 bg-white rounded-tl-3xl px-4 md:px-8 lg:px-12 pt-12 md:pt-16 lg:pt-20">
+          <div className="max-w-5xl mx-auto">
+            <h1 className="text-[rgba(33,34,75,1)] text-4xl font-medium leading-tight text-center">
+              What can I help with?
+            </h1>
+
+            <SearchBar />
+
+            <div className="mt-16 md:mt-20">
+              <h2 className="text-gray-800 text-lg font-medium leading-none">
+                Popular templates
+              </h2>
+
+              <CategoryTabs
+                categories={categories}
+                activeCategory={activeCategory}
+                onCategoryChange={setActiveCategory}
+                className="mt-6"
+              />
+
+              <div className="flex flex-wrap gap-4 mt-6">
+                {templates.map((template, index) => (
+                  <TemplateCard
+                    key={index}
+                    title={template.title}
+                    description={template.description}
+                    icons={template.icons}
+                    selected={index === 0}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+
+      <div className="fixed bottom-4 left-4 right-4 z-10">
+        <div className="bg-[rgba(241,243,244,1)] flex items-center justify-between px-4 py-2 rounded-2xl max-w-5xl mx-auto">
+          <div className="flex items-center gap-2.5">
             <img
               src="https://cdn.builder.io/api/v1/image/assets/3a302e9e45884d5dbbb217f74f227a95/5bb10f47cb83e82f2f275132210a8c467571657dbf3f0c313c75c655997899c0"
-              className="aspect-[1] object-contain w-3 shrink-0 my-auto"
+              className="w-3 h-3"
               alt="Domain icon"
             />
-            <span>NPi.ai</span>
+            <span className="text-sm text-[rgba(32,33,36,1)]">NPi.ai</span>
           </div>
           <img
             src="https://cdn.builder.io/api/v1/image/assets/3a302e9e45884d5dbbb217f74f227a95/a2073d432084b28b90c9c14fc721a2f2a44c544ea81883c6627d1c71e4a9f552"
-            className="aspect-[1] object-contain w-4 shrink-0"
+            className="w-4 h-4"
             alt="Action icon"
           />
         </div>
