@@ -43,7 +43,7 @@ const Index = () => {
       <div className="flex flex-1">
         <Sidebar />
 
-        <main className="flex-1 bg-white rounded-tl-3xl px-4 md:px-8 lg:px-12 pt-12 md:pt-16 lg:pt-20">
+        <main className="flex-1 bg-white rounded-tl-3xl px-4 md:px-8 lg:px-12 pt-12 md:pt-16 lg:pt-20 pb-20">
           <div className="max-w-5xl mx-auto">
             <h1 className="text-[rgba(33,34,75,1)] text-4xl font-medium leading-tight text-center">
               What can I help with?
@@ -75,6 +75,62 @@ const Index = () => {
                 ))}
               </div>
             </div>
+          </div>
+
+          <div className="flex items-center justify-center gap-2 mt-8">
+            <button className="p-2 bg-gray-100 rounded-lg">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.5 12L5.5 8L10.5 4"
+                  stroke="#1C1B1F"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+            <span className="text-sm text-gray-800">25 / 46</span>
+            <button className="p-2 bg-gray-100 rounded-lg">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5.5 12L10.5 8L5.5 4"
+                  stroke="#1C1B1F"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+            <button className="flex items-center gap-2 ml-2 bg-black text-white px-3 py-2 rounded-lg">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M2.66667 8H13.3333M13.3333 8L8 2.66667M13.3333 8L8 13.3333"
+                  stroke="white"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+              <span className="text-sm">Restart</span>
+            </button>
           </div>
         </main>
       </div>
