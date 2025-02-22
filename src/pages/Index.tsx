@@ -78,24 +78,6 @@ const Index = () => {
           </div>
         </main>
       </div>
-
-      <div className="fixed bottom-4 left-4 right-4 z-10">
-        <div className="bg-[rgba(241,243,244,1)] flex items-center justify-between px-4 py-2 rounded-2xl max-w-5xl mx-auto">
-          <div className="flex items-center gap-2.5">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/3a302e9e45884d5dbbb217f74f227a95/5bb10f47cb83e82f2f275132210a8c467571657dbf3f0c313c75c655997899c0"
-              className="w-3 h-3"
-              alt="Domain icon"
-            />
-            <span className="text-sm text-[rgba(32,33,36,1)]">NPi.ai</span>
-          </div>
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets/3a302e9e45884d5dbbb217f74f227a95/a2073d432084b28b90c9c14fc721a2f2a44c544ea81883c6627d1c71e4a9f552"
-            className="w-4 h-4"
-            alt="Action icon"
-          />
-        </div>
-      </div>
     </div>
   );
 };
